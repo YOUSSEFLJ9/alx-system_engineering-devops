@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -a1p | sed -E 's|/$|/|' | sort -d | sed -E 's|^./||' | tr '\n' ',' | sed 's/,$/\n/'
