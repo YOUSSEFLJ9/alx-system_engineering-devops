@@ -1,1 +1,1 @@
-this script to print the current working directory
+this is the read me file 
