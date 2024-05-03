@@ -1,0 +1,9 @@
+!#/usr/bin/env bash
+#this script print it 
+h=0
+
+until [ $h -ge 10 ]
+do
+	echo "Holberton School"
+	h=$(( h+ 1 ))
+done
