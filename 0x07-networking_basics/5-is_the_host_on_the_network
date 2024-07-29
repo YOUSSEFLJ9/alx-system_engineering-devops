@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
-# Check if the user provided an argument then excute the command pingto look at the ICMP protocol, which is used to check if a host is on the network. else, print the usage of the script and exit with status 1.
-if [ "$#" -ne 1 ]; then
-    echo "Usage: $0 {IP_ADDRESS}"
-    exit 1
+# script that pings an IP address passed as an argument
+
+# ip variable
+IP="${1}"
+
+# filename variable
+fn=$(basename "${BASH_SOURCE[@]}")
+
+if ! [ "$IP" ]; then
+	echo "Usage: ${fn} {IP_ADDRESS}"
+else
+	ping -c 5 "${IP}"
 fi
-IP_ADDRESS=$1
-ping -c 5 "$IP_ADDRESS"
