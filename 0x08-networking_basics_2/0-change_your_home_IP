@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#this script will change the IP address of your home network to 127.0.0.2 ,and of facebook.com to 8.8.8.8
+# Change localhost to resolve to 127.0.0.2
+sed -i 's/^127.0.0.1\s\+localhost/127.0.0.2 localhost/' /etc/hosts
+
+# Add facebook.com to resolve to 8.8.8.8
+#echo "8.8.8.8 facebook.com" | sudo tee -a /etc/hosts
