@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#this script show all ip in a machine, the ip is in the first column and the loopback ip
+ifconfig | grep "inet " | awk '{print $2}' | sed 's/addr://g' | grep -v "
